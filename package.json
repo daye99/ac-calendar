@@ -4,7 +4,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "install:husky": "husky install",
+    "lint:pretty": "pretty-quick --staged",
+    "lint:stylelint": "stylelint --fix \"**/*.{tsx,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:all": "npm run lint:eslint && npm run lint:stylelint"
   },
   "dependencies": {
     "vue": "^3.2.25"
